@@ -1,0 +1,11 @@
+[Unit]
+Description=Neoload load generator agent.
+After=network.target
+
+[Service]
+ExecStart=/bin/sh /opt/neoload/bin/LoadGeneratorAgent
+User=neoload
+Group=neoload
+
+[Install]
+WantedBy=multi-user.target
